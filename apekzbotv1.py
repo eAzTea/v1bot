@@ -13,6 +13,10 @@ Clientdiscord = discord.Client()
 
 
 @client.event
+async def on_member_join(member):
+    print('Recognised that a member called ' + member.name + ' joined')
+    await client.send_message(member, 'Was geht! Willkommen bei Apekz, melde dich zuerst bei einen Operator der wird die weiters erklären! Viel Spaß')
+    print('Sent message to ' + member.name)
 async def on_ready():
     await client.change_presence(game=Game(name='Rainbow Six'))
     print('Ready, Freddy') 
