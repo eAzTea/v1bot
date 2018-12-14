@@ -15,23 +15,16 @@ Clientdiscord = discord.Client()
 @client.event
 async def on_member_join(member):
     print('Recognised that a member called ' + member.name + ' joined')
-    await client.send_message(member, 'Was geht! Willkommen bei Apekz, melde dich zuerst bei einen Operator der wird die weiters erklären! Viel Spaß')
+    await client.send_message(member, 'Was geht, willkommen bei Apekz. Melde dich zuerst bei einen Operator er wird dir alles weitere erklären!')
     print('Sent message to ' + member.name)
 async def on_ready():
-    await client.change_presence(game=Game(name='Rainbow Six'))
+    await client.change_presence(game=Game(name='      '))
     print('Ready, Freddy') 
 
 
 @client.event
 async def on_message(message):
-    if message.content == '$help':
-        await client.send_message(message.channel,'Wenn du Neu bist melde dich zuerst bei einen Operator!')
-client.run('NTIyNzg5Njc5ODcxODE5Nzg2.DvQFhw.INWP8K064raDypBIw5lw50ztT8M')
-    if message.content == '$apekzlogo':
-        em = discord.Embed(description='')
-        em.set_image(url='https://cdn.discordapp.com/attachments/520952616843214858/523275401829810186/Apexz_Logo.png')
-        await client.send_message(message.channel, embed=em)
-    if message.content == '$apekzavatar':
-        em = discord.Embed(description='')
-        em.set_image(url='https://cdn.discordapp.com/attachments/520952616843214858/523275442334203915/Apexz_Avatar.png')
-        await client.send_message(message.channel, embed=em)
+    if message.content == '$avatar':
+        await client.send_message(message.channel,'https://cdn.discordapp.com/attachments/520952616843214858/523275442334203915/Apexz_Avatar.png?width=676&height=676')
+    if message.content == '$logo':
+        await client.send_message(message.channel,'https://cdn.discordapp.com/attachments/520952616843214858/523275401829810186/Apexz_Logo.png')
