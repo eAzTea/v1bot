@@ -15,7 +15,7 @@ Clientdiscord = discord.Client()
 @client.event
 async def on_member_join(member):
     await client.change_presence(game=Game(name='Rainbow Six Siege'))
-    await client.send_message(member, 'Willkommen bei Apekz, melde dich bitte zuerst bei einen Operator er wird die weiters erklären! Wenn keiner Online ist dann bitte bei der Leitung! Operator: Lunar_Berry & Hiem | Leitung: eAzTeA & Karuukan')
+    await client.send_message(member, 'Willkommen bei Apekz, melde dich zuerst unter den Channel hiermelden. Darauf wird Dir ein Operator alles erklären! Operator: Lunar_Berry & Hiem | Leitung: eAzTeA & Karuukan')
     print('Sent message to ' + member.name)
 async def on_ready():
     await client.change_presence(game=Game(name='      '))
@@ -33,4 +33,3 @@ async def on_message(message):
     if message.content == '$binneu':
         await client.send_message(message.channel,'Wenn du Neu bist melde dich zuerst bei einen Operator!')
 client.run('NTIyNzg5Njc5ODcxODE5Nzg2.DvZ6YA.NznqWz7Gm2ce2FWpD-hXu_7HN_s')
-
