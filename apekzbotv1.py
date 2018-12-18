@@ -15,7 +15,7 @@ Clientdiscord = discord.Client()
 @client.event
 async def on_member_join(member):
     await client.change_presence(game=Game(name='Rainbow Six Siege'))
-    await client.send_message(member, 'Willkommen bei Apekz, melde dich zuerst unter den Channel hiermelden. Darauf wird Dir ein Operator alles erklären! Operator: Lunar_Berry & Hiem | Leitung: eAzTeA & Karuukan')
+    await client.send_message(member, 'Willkommen bei Apekz, melde dich zuerst unter den Channel hiermelden. Darauf wird Dir ein Operator alles erklären! Operator: Lunar_Berry | Leitung: eAzTeA & Karuukan')
     print('Sent message to ' + member.name)
 async def on_ready():
     await client.change_presence(game=Game(name='      '))
