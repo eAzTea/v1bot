@@ -1,1 +1,1 @@
-worker: python apekzbotv1.py
+worker: python botv2.py
